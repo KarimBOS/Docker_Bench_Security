@@ -168,12 +168,14 @@ check_8_2() {
 # Generar informe final
 generate_report() {
   echo "Generando informe en $output_file..."
+  echo "===============================" >> "$output_file"
   echo "Resultados del análisis:" >> "$output_file"
 
   for test in $selected_tests; do
     echo "Resultado del test $test: Completado" >> "$output_file"
   done
 
+  echo "===============================" >> "$output_file"
   echo "Informe generado en: $output_file"
 }
 
